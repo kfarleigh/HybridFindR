@@ -1,0 +1,31 @@
+Package: HybridFindR
+Title: Testing for differential introgression
+Version: 0.0.0.9000
+Authors@R: c(person( "Keaka", "Farleigh", email = "keakafarleigh@gmail.com", role = c("aut", "cph", "cre"), comment = c(ORCID = "0000-0002-9195-121X")),
+  person( "Alfredo", "Ascanio", role = c("aut", "cph", "ctb"), comment = c(ORCID = "0000-0001-9987-7977")),
+  person( "Tereza", "Jezkova", role = c("aut", "cph"), comment = c(ORCID = "0000-0003-4114-4564")))
+Description: Functions to detect signals of differential introgression and investigate individual loci. 
+      Takes a structure file as input, uses the R package gghybrid to idenify parental alleles, and then 
+      uses a permutation approach to determine if there is a greater proportion of parental alleles 
+      coming from one species than is expected by random chance. Also allows one to investigate individual alleles 
+      according to missingness and the individuals that are homozygous and heterozygous for each of the parental 
+      alleles at a locus. 
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    data.table,
+    grDevices,
+    graphics,
+    gghybrid,
+    stats,
+    utils,
+    gtools,
+    plyr,
+    ggplot2
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
