@@ -124,6 +124,6 @@ names(Pval) <- SNPs_final
 Pvalue <- data.frame(t(list2DF(Pval)))
 Pvalue$SNP <- SNPs_final
 colnames(Pvalue) <- c('Raw.P', 'SNP')
-Pvalue[Pvalue$Raw.P == 0] <- (1/permutations)
+Pvalue$Raw.P[Pvalue$Raw.P == 0] <- (1/permutations)
 return(Pvalue)
 }
