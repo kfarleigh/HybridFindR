@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{ DI_test <- Differential_Introgression(Data, H.id = 'H', S0.id = 'P',
+#' \dontrun{ DI_test <- Differential_introgression(Data, H.id = 'H', S0.id = 'P',
 #' S1.id = 'K', n.ind = 73, permutations = 1000, ploidy = 2)}
 Differential_introgression <- function(Data, H.id, S0.id, S1.id, n.ind, permutations, ploidy) {
 # Pull genotypes from the prepdata object
@@ -90,7 +90,8 @@ Pval <- list()
 cat(paste("Running Permutations"),
     fill=1); utils::flush.console()
 # Set progress bar
-pb <- utils::txtProgressBar(min = 0, max = (ncol(Gtypes)-1), initial = 0, style = 3)
+Nsnp <- (ncol(Gtypes)-1)
+pb <- utils::txtProgressBar(min = 0, max = Nsnp, initial = 0, style = 3)
 
 for(j in 1:(ncol(Gtypes)-1)) {
 for(i in 1:perms) {
