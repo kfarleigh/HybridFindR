@@ -72,12 +72,8 @@ Observed_prop[[i]] <- PropH
 # Remove anything that had an observed difference of 0
 names(Observed_prop) <- SNPs
 
-# Remove SNPs with an Observed Proportion of 0
-which(Observed_prop == 0)
-Obs_prop_final <- Observed_prop[-(which(Observed_prop == 0))]
-
 # Remove those SNPs from the Genotypes object
-Gtypes <- Genotypes[,-(which(Observed_prop == 0))]
+Gtypes <- Genotypes[,which(Observed_prop != 0)]
 
 # Calculate the differences from our permutations
 Perm_prop <- NULL
