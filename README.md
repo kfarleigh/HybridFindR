@@ -7,7 +7,7 @@ This repository contains code for the R package HybridFindR. The goal of HybridF
 
 You can install the development version of HybridFindR from [GitHub](https://github.com/) with:
 
-``` r
+```r
 # install.packages("devtools")
 devtools::install_github("kfarleigh/HybridFindR")
 ```
@@ -18,13 +18,14 @@ A complete manual for all documented functions is available [here](insert url)
 ## Vignette
 
 A vignette that walks you through differential introgression analysis can be found using:
-``` 
+
+```r 
 library(HybridFindR)
 vignette(topic = "Differential_Introgression_Analysis", package = "HybridFindR")
 ```
 
 There is also an example data file included in the package, which you can load using the command:
-```
+```r
 data(HybridFindR)
 ```
 
