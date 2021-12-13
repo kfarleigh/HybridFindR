@@ -20,9 +20,12 @@ knitr::opts_chunk$set(
 ```{r setup}
 # Load HybridFindR
 library(HybridFindR)
+library(data.table)
+library(gghybrid)
 
 # First, we load in our data
-Dat <- data(HybridFindR)
+data("HybridFindR.data")
+write.csv(Dat, 'Data.csv', row.names = FALSE)
 
 # Let's look at our data and see what we have going on
 str(Dat)
@@ -34,14 +37,14 @@ We see that the first two columns give us information about each sample and the 
 We will prepare our data for analysis. We know that there are 2 columns before any genotype information (numprecol = 2), the value indicating missing data is NA (missingval = 'NA'), our data follows the onerow structure format (1 column per marker; onerow = 0), we have 73 individuals in our dataset (numinds = 73), and we know the labels for the source populations (S0.id = 'P' and S1.id = 'K').
 
 ```{r}
-Geno <- PrepareData(Dat, numprecol = 2, missingval = 'NA', onerow = 0, numinds = 73, S0.id = 'P', S1.id = 'K')
+Geno <- PrepareData('Data.csv', numprecol = 2, missingval = 'NA', onerow = 0, numinds = 73, S0.id = 'P', S1.id = 'K')
 ```
 
 
 ## Run differential introgression analysis
 Now we get to look for SNPs that are exhibiting signals of differential introgression. We need the dataframe generate by the PrepareData function (Geno), the labels for each population (H.id = 'H', S0.id = 'P', S1.id = 'K'), the number of individuals (n.ind = 73), the number of permutations to run for significance testing (permutations = 10000), and the ploidy of your data (ploidy = 2). Remember, HybridFindR looks for an greater proportion of S1 alleles than would be expected due to random chance. So in this example we are looking for SNPs that have a greater proportion of K alleles in hybrids than we would expect due to chance. 
-```{r, eval=FALSE}
-DI_test <- Differential_Introgression(Geno, H.id = 'H', S0.id = 'P', S1.id = 'K', n.ind = 73, permutations = 10000, ploidy = 2)
+```{r}
+DI_test <- Differential_introgression(Geno, H.id = 'H', S0.id = 'P', S1.id = 'K', n.ind = 73, permutations = 10000, ploidy = 2)
 ```
 
 Finally, we correct for multiple tests. How you correct for multiple tests or if you do is up to you, however, it should certainly be considered. Here, I show you how to adjust the p-values using both the [bonferroni correction](https://www.tandfonline.com/doi/abs/10.1080/01621459.1961.10482090) and the [false discovery rate](https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/j.2517-6161.1995.tb02031.x). 
