@@ -24,11 +24,11 @@ library(data.table)
 library(gghybrid)
 
 # First, we load in our data
-data("HybridFindR.data")
-write.csv(Dat, 'Data.csv', row.names = FALSE)
+data(Anolis)
+write.csv(Anolis, 'Data.csv', row.names = FALSE)
 
 # Let's look at our data and see what we have going on
-str(Dat)
+str(Anolis)
 ```
 
 We see that the first two columns give us information about each sample and the remaining columns contain genotype data. HybridFindR expects that the first column is the sample id and that the second indicates which population that individual is assigned to. It is important to know which population labels correspond to each source population and the hybrid population as HybridFindR looks for a greater proportion of S1 alleles in hybrids than what would be expected due to random chance. Here, P is the S0 population, H is the hybrid population, and K is the S1 population.
@@ -56,5 +56,8 @@ DI_test$BH <- p.adjust(DI_test$Raw.P, method = "BH")
 
 # Find candidate SNPs exhibiting signals of differential introgression
 DI_candidates <- DI_test[which(DI_test$Bon < 0.05),]
+
+# Look at the candidates
+DI_candidates
 
 ```
