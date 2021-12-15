@@ -9,7 +9,7 @@ You can install the development version of HybridFindR from [GitHub](https://git
 
 ```r
 # install.packages("devtools")
-devtools::install_github("kfarleigh/HybridFindR")
+devtools::install_github("kfarleigh/HybridFindR", build_vignettes = TRUE)
 ```
 
 ## Manual 
@@ -21,7 +21,7 @@ A vignette that walks you through differential introgression analysis can be fou
 
 ```r 
 library(HybridFindR)
-vignette(topic = "Differential_Introgression_Analysis", package = "HybridFindR", build_vignettes = TRUE)
+vignette(topic = "Differential_Introgression_Analysis", package = "HybridFindR"")
 ```
 
 There is also an example data file included in the package, which you can load using the command:
