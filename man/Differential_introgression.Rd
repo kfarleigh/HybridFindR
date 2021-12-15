@@ -36,6 +36,6 @@ A p-value for each SNP representing the proportion of permutations that possesse
 Peroform differential introgression analysis
 }
 \examples{
-\dontrun{ DI_test <- Differential_Introgression(Data, H.id = 'H', S0.id = 'P',
+\dontrun{ DI_test <- Differential_introgression(Data, H.id = 'H', S0.id = 'P',
 S1.id = 'K', n.ind = 73, permutations = 1000, ploidy = 2)}
 }
