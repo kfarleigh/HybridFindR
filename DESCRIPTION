@@ -1,6 +1,6 @@
 Package: HybridFindR
 Title: Testing for differential introgression
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: c(person( "Keaka", "Farleigh", email = "keakafarleigh@gmail.com", role = c("aut", "cph", "cre"), comment = c(ORCID = "0000-0002-9195-121X")),
   person( "Alfredo", "Ascanio", role = c("aut", "cph", "ctb"), comment = c(ORCID = "0000-0001-9987-7977")),
   person( "Tereza", "Jezkova", role = c("aut", "cph"), comment = c(ORCID = "0000-0003-4114-4564")))
@@ -24,7 +24,8 @@ Imports:
     utils,
     gtools,
     plyr,
-    ggplot2
+    ggplot2,
+    dplyr
 Suggests: 
     rmarkdown,
     knitr

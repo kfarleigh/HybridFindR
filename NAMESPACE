@@ -3,4 +3,5 @@
 export(Differential_introgression)
 export(Loci_stats)
 export(Missingness)
+export(Plotprops)
 export(PrepareData)
