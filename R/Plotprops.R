@@ -5,6 +5,7 @@
 #' @param ploidy Numeric, ploidy of markers in the Data object.
 #' @param S1_color Character, desired color for the S1 parental alleles.
 #' @param S0_color Character, desired color for the S0 parental alleles.
+#' @param Data Object produced by the PrepareData function
 #'
 #' @return A plot displaying the proportion of parental alleles in hybrids at each SNP provided to the SNP_names parameter.
 #' @export
@@ -12,7 +13,7 @@
 #' @examples
 #' \dontrun{ Plotprops(SNP_names = candidate_snps, ploidy = 2,
 #' S1_color = 'red', S0_color = 'blue')}
-Plotprops <- function(SNP_names, ploidy, S1_color, S0_color){
+Plotprops <- function(Data, SNP_names, ploidy, S1_color, S0_color){
 Cand_SNP <- SNP_names
 Cands_geno <- dplyr::select(Data, c(1:2,all_of(Cand_SNP)))
 

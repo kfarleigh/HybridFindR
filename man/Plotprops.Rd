@@ -4,9 +4,11 @@
 \alias{Plotprops}
 \title{Plot the proportion of parental alleles in hybrid individuals}
 \usage{
-Plotprops(SNP_names, ploidy, S1_color, S0_color)
+Plotprops(Data, SNP_names, ploidy, S1_color, S0_color)
 }
 \arguments{
+\item{Data}{Object produced by the PrepareData function}
+
 \item{SNP_names}{Character or character vector, containing the names of SNPs that you want to plot.}
 
 \item{ploidy}{Numeric, ploidy of markers in the Data object.}
