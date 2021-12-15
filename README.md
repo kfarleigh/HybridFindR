@@ -26,7 +26,7 @@ vignette(topic = "Differential_Introgression_Analysis", package = "HybridFindR")
 
 There is also an example data file included in the package, which you can load using the command:
 ```r
-data(HybridFindR)
+data("HybridFindR.data")
 ```
 
 ## Contact
