@@ -15,7 +15,7 @@
 #' S1_color = 'red', S0_color = 'blue')}
 Plotprops <- function(Data, SNP_names, ploidy, S1_color, S0_color){
 Cand_SNP <- SNP_names
-Cands_geno <- dplyr::select(Data, c(1:2,all_of(Cand_SNP)))
+Cands_geno <- dplyr::select(Data, c(1:2,dplyr::all_of(Cand_SNP)))
 
 Hybrid_geno <- as.data.frame(Cands_geno[which(Cands_geno$POPID == 'H'),])
 
@@ -24,7 +24,7 @@ S0_prop <- list()
 Loc <- colnames(Cands_geno[,3:length(Cands_geno)])
 for (i in Loc) {
   H_geno <- data.frame(Hybrid_geno[,i])
-  H_geno <- data.frame(H_geno[complete.cases(H_geno),])
+  H_geno <- data.frame(H_geno[stats::complete.cases(H_geno),])
   propS1 <- round(sum(H_geno[,1])/(nrow(H_geno)*ploidy),3)
   propS0 <- 1-propS1
   S1_prop[[i]] <- propS1
