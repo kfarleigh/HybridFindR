@@ -42,11 +42,11 @@ S0_df$S0_prop = (S0_df$S0_prop * -1)
 
 
 Propplot <- ggplot2::ggplot() +
-  ggplot2::geom_point(data = S1_df, aes( x = 1:nrow(S1_df), y = S1_prop), size = 0.5, color= S1_color) +
-  ggplot2::geom_point(data = S0_df, aes( x = 1:nrow(S0_df), y = S0_prop), size = 0.5, color= S0_color) +
-  ggplot2::geom_linerange(data = S1_df, aes(x = 1:nrow(S1_df), ymax = S1_prop, ymin = 0), color= S1_color) +
-  ggplot2::geom_linerange(data = S0_df, aes(x = 1:nrow(S0_df), ymax = 0, ymin = S0_prop), color= S0_color) +
-  ggplot2::theme_classic() + xlab('Candidate SNPs') + ylab('Proportion of parental alleles in hybrids')
+  ggplot2::geom_point(data = S1_df, ggplot2::aes( x = 1:nrow(S1_df), y = S1_prop), size = 0.5, color= S1_color) +
+  ggplot2::geom_point(data = S0_df, ggplot2::aes( x = 1:nrow(S0_df), y = S0_prop), size = 0.5, color= S0_color) +
+  ggplot2::geom_linerange(data = S1_df, ggplot2::aes(x = 1:nrow(S1_df), ymax = S1_prop, ymin = 0), color= S1_color) +
+  ggplot2::geom_linerange(data = S0_df, ggplot2::aes(x = 1:nrow(S0_df), ymax = 0, ymin = S0_prop), color= S0_color) +
+  ggplot2::theme_classic() + ggplot2::xlab('Candidate SNPs') + ggplot2::ylab('Proportion of parental alleles in hybrids')
 
 return(Propplot)
 }
