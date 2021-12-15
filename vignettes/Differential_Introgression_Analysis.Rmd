@@ -70,6 +70,6 @@ It can also be useful to visualize the proportion of parental alleles at each ca
 Cand_SNPnames <- DI_candidates$SNP
 
 # Then we make our plot
-Plotprops(Cand_SNPnames, ploidy = 2, S1_color = 'red', S0_color = 'blue')
+Plotprops(Data = Geno, SNP_names = Cand_SNPnames, ploidy = 2, S1_color = 'red', S0_color = 'blue')
 
 ```
