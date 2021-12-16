@@ -35,7 +35,7 @@ If you use HybridFindR in your work please cite:
 
 Farleigh, K., Ascanio, A., Farleigh, M.E., Schield, D.R., Card, D.C., Leal, M., Castoe, T.A., Jezkova, T., Rodriguez-Robles, J.A. (in prep). Signals of differential introgression in the genome of natural hybrids of Caribbean anoles.
 
-You should also consider citing:
+You should also cite:
 
 Bailey, R. (2020). gghybrid: R package for evolutionary analysis of hybrids and hybrid zones.
 
