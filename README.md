@@ -18,7 +18,7 @@ A vignette that walks you through differential introgression analysis can be fou
 
 ```r 
 library(HybridFindR)
-vignette(topic = "Differential_Introgression_Analysis", package = "HybridFindR"")
+vignette(topic = "Differential_Introgression_Analysis", package = "HybridFindR")
 ```
 
 There is also an example data file included in the package, which you can load using the command:
@@ -28,8 +28,15 @@ data("Anolis")
 
 ## Contact
 
-After referring to the manual and vignette, please direct all questions to keakafarleigh@gmail.com. 
+After referring to the vignette, please direct all questions to keakafarleigh@gmail.com. 
 
 ## Citing HybridFindR
 If you use HybridFindR in your work please cite:
-"Farleigh, K., Ascanio, A., Farleigh, M.E., Schield, D.R., Card, D.C., Leal, M., Castoe, T.A., Jezkova, T., Rodriguez-Robles, J.A. (in prep). Signals of differential introgression in the genome of natural hybrids of Caribbean anoles."
+
+Farleigh, K., Ascanio, A., Farleigh, M.E., Schield, D.R., Card, D.C., Leal, M., Castoe, T.A., Jezkova, T., Rodriguez-Robles, J.A. (in prep). Signals of differential introgression in the genome of natural hybrids of Caribbean anoles.
+
+You should also consider citing:
+
+Bailey, R. (2020). gghybrid: R package for evolutionary analysis of hybrids and hybrid zones.
+
+Buerkle, C. A. (2005). Maximum likelihood estimation of a hybrid index based on molecular markers. Molecular Ecology Notes, 5(3), 684-687.
