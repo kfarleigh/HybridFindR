@@ -12,9 +12,6 @@ You can install the development version of HybridFindR from [GitHub](https://git
 devtools::install_github("kfarleigh/HybridFindR", build_vignettes = TRUE)
 ```
 
-## Manual 
-A complete manual for all documented functions is available [here](insert url) 
-
 ## Vignette
 
 A vignette that walks you through differential introgression analysis can be found using:

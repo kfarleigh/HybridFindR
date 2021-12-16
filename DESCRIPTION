@@ -17,6 +17,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
     data.table,
+    devtools,
     grDevices,
     graphics,
     gghybrid,
@@ -28,8 +29,9 @@ Imports:
     dplyr
 Suggests: 
     rmarkdown,
-    knitr
+    knitr,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Depends: 
-    R (>= 2.10)
+    R (>= 4.1.0)
 Remotes: ribailey/gghybrid

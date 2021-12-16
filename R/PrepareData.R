@@ -10,6 +10,7 @@
 #' @param S1.id Character, the label for the S1 parental population.
 #'
 #' @return Returns a genotype table based on the number of copies of the S1 allele in each individual at each marker.
+#' @references Bailey R. (2020) gghybrid: R package for evolutionary analysis of hybrids and hybrid zones.10.5281/zenodo.3676499
 #' @export
 #'
 #' @examples

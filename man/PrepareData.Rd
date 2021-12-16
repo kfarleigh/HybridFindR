@@ -32,3 +32,6 @@ Prepare a structure file (or similar data table) for differential introgression 
 Data <- PrepareData('mystructurefile.csv', numprecol = 2, missingval = 'NA',
 onerow = 0, numinds = 73, S0.id = 'P', S1.id = 'K')}
 }
+\references{
+Bailey R. (2020) gghybrid: R package for evolutionary analysis of hybrids and hybrid zones.10.5281/zenodo.3676499
+}
