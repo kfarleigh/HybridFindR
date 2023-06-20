@@ -3,6 +3,8 @@
 
 This repository contains code for the R package HybridFindR. The goal of HybridFindR is to identify loci exhibiting signals of differential introgression.
 
+*_Note:_ This method is under review and has not been validated in distinguishing adaptive introgression from genetic drift. We are currently working to validate this method. We recommend pairing this method with demographic modeling and simulations until it has been validated. Please see [Farleigh et al., in review]() and contact Keaka Farleigh (farleik@miamioh.edu) if you have questions.*
+
 ## Installation
 
 You can install the development version of HybridFindR from [GitHub](https://github.com/) with:
