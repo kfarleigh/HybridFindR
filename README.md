@@ -1,9 +1,9 @@
 
-# HybridFindR
+# HybridFindR <img src="man/figures/HF_logo.png" align="right" width="145" height = "145"/>
 
 This repository contains code for the R package HybridFindR. The goal of HybridFindR is to identify loci exhibiting signals of differential introgression.
 
-*_Note:_ This method is under review and has not been validated in distinguishing adaptive introgression from genetic drift. We are currently working to validate this method. We recommend pairing this method with demographic modeling and simulations until it has been validated. Please see [Farleigh et al., in review]() and contact Keaka Farleigh (farleik@miamioh.edu) if you have questions.*
+*_Note:_ This method has not been validated in distinguishing differential introgression from genetic drift. We recommend pairing this method with demographic modeling (e.g., _Moments_ or _dadi_) and simulations (e.g., _msprime_) until it has been validated. Please see [Farleigh et al., 2023](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.17170) and contact Keaka Farleigh (farleik@miamioh.edu) if you have questions.*
 
 ## Installation
 
@@ -35,7 +35,7 @@ After referring to the vignette, please direct all questions to keakafarleigh@gm
 ## Citing HybridFindR
 If you use HybridFindR in your work please cite:
 
-Farleigh, K., Ascanio, A., Farleigh, M.E., Schield, D.R., Card, D.C., Leal, M., Castoe, T.A., Jezkova, T., Rodriguez-Robles, J.A. (in prep). Signals of differential introgression in the genome of natural hybrids of Caribbean anoles.
+Farleigh, K., Ascanio, A., Farleigh, M. E., Schield, D. R., Card, D. C., Leal, M., Castoe, T. A., Jezkova, T., & Rodríguez-Robles, J. A. (2023). Signals of differential introgression in the genome of natural hybrids of Caribbean anoles. _Molecular Ecology_, 32, 6000–6017. https://doi.org/10.1111/mec.17170
 
 You should also cite:
 
